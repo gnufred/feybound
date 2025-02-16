@@ -1,0 +1,8 @@
+{{ range .Translations }}
+    {{ if ne .Lang $.Lang }}
+        <nav class="languages">
+            <i class="fas fa-book"></i>
+			<a href="{{ .Permalink }}" id="lang-link">{{ .Language.LanguageName }}</a>
+        </nav>
+	{{ end }}
+{{ end }}

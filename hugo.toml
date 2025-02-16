@@ -1,0 +1,29 @@
+baseURL = "https://v1.feybound.fr/"
+title = "Feybound"
+languageCode = "en-en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+theme = "site"
+enableInlineShortcodes = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[languages]
+[languages.en]
+    weight = 1
+    languageName = "English"
+    contentDir = "content/en"
+
+[languages.fr]
+    weight = 2
+    languageName = "Français"
+    contentDir = "content/fr"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+
+[taxonomies]
+    # Disabling taxonomies by not defining any

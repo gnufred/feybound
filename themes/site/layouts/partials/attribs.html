@@ -1,0 +1,6 @@
+{{ if or (not (isset .Params "attribs")) (and (isset .Params "attribs") (ne .Params.attribs false)) }}
+<div class="attribs">
+	<h6></h6>
+	<p>{{ i18n "attribs.fancontent" | safeHTML }}</p>
+</div>
+{{ end }}

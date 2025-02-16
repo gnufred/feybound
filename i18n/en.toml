@@ -1,0 +1,19 @@
+[nav]
+back = 'back'
+toc = 'toc'
+next = 'next'
+previous = 'prev'
+
+[social]
+title = 'Feybound: A Dance of Shadows'
+desc = "An epic fantasy novel about love and life's ambiguities."
+tags = "Dungeons & Dragons, D&D novel, fantasy novel, role-playing game, adventure story"
+locale = 'en_US'
+url = 'en/'
+
+[yt]
+title = 'Audio Narration'
+playlist = 'PLBeaFtyUdfpvuD9J2dLmhPKri-JQk5TqW'
+
+[attribs]
+fancontent = '"Feybound: A Dance of Shadows" is <strong>unofficial</strong> Fan Content permitted under the <a href="/en/annex/fancontent/">Fan Content Policy</a> and the <a href="/en/annex/ogl/">Open Game License (OGL)</a>. <strong>Not approved/endorsed</strong> by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.'

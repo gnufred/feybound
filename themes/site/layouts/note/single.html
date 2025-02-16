@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "lang.html" . }}
+    {{ partial "nav.html" . }}
+    <main>
+        <div class="media note">
+			<i class="fa-regular fa-pen-to-square"></i>
+            <a href="{{ .Params.link }}#{{ .Params.id }}">
+                {{ .Title }}
+            </a>
+			<i class="fa-regular fa-pen-to-square"></i>
+        </div>
+        <article>
+            {{ .Content }}
+        </article>
+		{{ partial "attribs.html" . }}
+    </main>
+    {{ partial "scroll.html" . }}
+    {{ partial "nav.html" . }}
+</body>
+</html>

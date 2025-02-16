@@ -1,0 +1,469 @@
+/* Base styles */
+body {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25em;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5; /* Increased for better readability */
+    word-spacing: 0.1em;
+    letter-spacing: 0.02em;
+    background-color: white;
+    color: black;
+}
+
+/* Styles for dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    nav.pagination {
+        border-color: white;
+    }
+}
+
+#indicator {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 2px dotted red;
+    z-index: 1000;
+}
+
+/* Pagination styles */
+nav {
+    padding: 0.5em 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+nav.languages {
+    padding: 0.5em 0;
+    font-size: 0.75em;
+}
+
+@media (prefers-color-scheme: dark) {
+    nav {
+        border-bottom: 2px solid white;
+    }
+}
+
+nav:last-of-type {
+    border-top: 2px solid black;
+    border-bottom: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    nav:last-of-type {
+        border-top: 2px solid white;
+    }
+}
+
+/* Text nav highlight */
+p.highlight {
+	border-radius: 4px;
+	background-color: #E9E9E9;
+}
+
+div.highlight {
+	border: 2px solid #555 !important;
+	background-color: #DDD !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	p.highlight {
+		background-color: #555;
+	}
+	div.highlight {
+		border: 2px solid #DDD !important;
+		background-color: #555 !important;
+	}
+}
+
+/* Contact links */
+
+.contact {
+    border-top: 2px solid black;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 0.9em;
+	opacity: 0.6;
+}
+
+.contact a {
+	margin: 0 0.25em;
+}
+
+@media (prefers-color-scheme: dark) {
+	.contact {
+        border-top: 2px solid white;
+		opacity: 0.75;
+    }
+}
+
+/* Progress styles */
+
+progress {
+    width: 100%;
+    height: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+/* Style for webkit browsers */
+progress::-webkit-progress-bar {
+    background-color: #ddd; /* background color */
+}
+
+progress::-webkit-progress-value {
+    background-color: black; /* fill color */
+}
+
+/* Style for Firefox */
+progress::-moz-progress-bar {
+    background-color: black; /* fill color */
+}
+
+/* Style for Internet Explorer */
+progress {
+    background-color: #ddd; /* background color */
+    color: black; /* fill color */
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Style for webkit browsers */
+    progress::-webkit-progress-bar {
+        background-color: #999; /* background color */
+    }
+
+    progress::-webkit-progress-value {
+        background-color: #ddd; /* fill color */
+    }
+
+    /* Style for Firefox */
+    progress::-moz-progress-bar {
+        background-color: #ddd; /* fill color */
+    }
+
+    /* Style for Internet Explorer */
+    progress {
+        background-color: #999; /* background color */
+        color: #ddd; /* fill color */
+    }
+}
+
+/* Main content styles */
+main {
+    padding: 1em; /* Increased padding for better readability */
+    max-width: 800px; /* Restricting the width for better readability */
+    margin: 0 auto; /* Centering the content */
+    background-color: #f9f9f9; /* Light background for content area */
+    border-left: 2px solid #e9e9e9;
+    border-right: 2px solid #e9e9e9;
+}
+
+main a {
+	text-decoration: underline;
+}
+
+main .media a {
+	text-decoration: none;
+}
+
+main.picture {
+    border-bottom: 2px solid #e9e9e9;
+    padding: 2px;
+}
+
+main.wide {
+    max-width: 1024px;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto 0 auto; /* Added margin for better spacing */
+}
+
+main.picture img {
+    margin: 2px auto 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    main {
+        background-color: #333;
+        border-left: 2px solid #555;
+        border-right: 2px solid #555;
+    }
+
+    main.picture {
+        border-bottom: 2px solid #555;
+    }
+}
+
+/* Scrolling arrows */
+#downButton {
+    position: fixed;
+    bottom: 12px;
+    right: calc(50% - 400px - 10px);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #eee;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    padding: 0.3em 0.8em;
+    text-align: center;
+    font-size: 1.3em;
+    opacity: 0.4;
+	outline: none;
+}
+
+/* Media query to adjust button position on smaller screens */
+@media (max-width: 850px) {
+    #downButton {
+        right: 12px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #downButton {
+        color: white;
+        background: #444;
+        border: 2px solid #999;
+    }
+}
+
+/* Link styles */
+a {
+    color: inherit; /* Makes links the same color as text */
+    text-decoration: none;
+}
+
+a.disabled {
+    opacity: 0.1;
+    text-decoration: none;
+    border-color: transparent;
+}
+
+/* D&D Beyond */
+a.dnd {
+    color: #c81e3c; /* D&D red color */
+    text-decoration: none;
+    border: 1px solid #c81e3c;
+    border-radius: 4px;
+    align-items: center;
+    padding-left: 0.25em;
+}
+
+a.dnd i {
+    font-size: 0.9em;
+}
+
+a.dnd:hover {
+    background-color: #c81e3c;
+    color: white;
+}
+
+a.dnd i {
+    margin: 0 0.25em;
+}
+
+@media (prefers-color-scheme: dark) {
+    a.dnd {
+        color: white; /* Matching the base theme for dark mode */
+        border: 2px solid white;
+    }
+
+    a.dnd:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2em;
+    margin: 0.25em 0;
+    padding: 0;
+}
+
+h1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: -10px;
+    margin-right: 0.3em; /* Adjust spacing */
+    width: 48px;
+    height: 48px;
+    background-image: url('/logo-light.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+    h1::before {
+		background-image: url('/logo-dark.svg');
+    }
+}
+
+h2 {
+    font-size: 1.6em;
+    margin: 0.5em 0;
+}
+
+h1, h2, h3 {
+    border-bottom: 2px solid #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3 {
+        border-bottom: 2px solid #999;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    h2 {
+        color: white;
+    }
+}
+
+/* Media box styles */
+.media {
+    background: #eee;
+    border: 2px solid #ddd;
+    padding: 0.20em 0.25em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Avoid boxes touching each other */
+.media + .media {
+    margin-top: 1em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .media {
+        background: #444;
+        border: 2px solid #999;
+    }
+}
+
+.media a {
+    border-bottom: 0;
+}
+
+h2 + .media {
+    margin-top: 1em;
+}
+
+.media:last-child {
+    margin-bottom: 1em;
+}
+
+/* Attributions styles */
+.attribs p {
+	line-height: 1.1em;
+	letter-spacing: -0.25px;
+	word-spacing: -2px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.attribs h6 {
+    border-bottom: 2px solid #ddd;
+	margin: 0;
+	line-height: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	.attribs h6 {
+        border-bottom: 2px solid #999;
+    }
+}
+
+.attribs p {
+	opacity: 0.5;
+	padding: 0;
+	padding-top: 0.5em;
+	margin: 0;
+	font-size: 0.75em;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+    body {
+        font-size: 1em; /* Slightly reduce font size on smaller screens */
+    }
+
+    main {
+        padding: 0.5em; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Allow main content to use full width */
+        border-left: none;
+        border-right: none;
+    }
+
+    nav {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Adjust heading sizes for smaller screens */
+    }
+
+    h1::before {
+        vertical-align: -6px;
+        width: 30px;
+        height: 30px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .media {
+        font-size: 1em; /* Adjust media box font size for smaller screens */
+    }
+
+    progress {
+        height: 4px;
+    }
+
+	.attribs p {
+		opacity: 0.6;
+		font-size: 0.9em;
+	}
+}
+
+/* Print friendly styles */
+@media print {
+  h1::before, nav, .media, .contact, .attribs, #downButton {
+    display: none;
+  }
+
+  main {
+	  border: 0 none;
+  }
+
+  main p {
+	  font-size: 0.8em;
+	  line-height: 1.2em;
+	  word-spacing: 0.1em;
+  }
+}
+

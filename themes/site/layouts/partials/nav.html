@@ -1,0 +1,37 @@
+<nav class="pagination">
+	{{ if .Params.type }}
+		<a href="{{ .Params.link }}#{{ .Params.id }}" id="prev-link"><i
+			class="fa-solid fa-angles-left"></i>
+			{{i18n "nav.back" }}</a>
+	{{ else }}
+		{{ with .Params.Prev }}
+			{{ if ne . "" }}
+			<a href="{{ . }}/" class="prev" id="prev-link"><i
+				class="fa-solid fa-angles-left"></i>
+				{{ i18n "nav.previous" }}</a>
+			{{ else }}
+				<a class="next disabled"> <i
+					class="fa-solid fa-angles-left"></i>
+					{{ i18n "nav.previous" }}</a>
+			{{ end }}
+		{{ else }}
+			<a class="prev disabled"><i
+				class="fa-solid fa-angles-left"></i>
+				{{ i18n "nav.previous" }}</a>
+		{{ end }}
+		| <a href="{{ "/nav/" | relLangURL }}" class="nav" id="toc-link">{{ i18n "nav.toc" }}</a> |
+		{{ with .Params.Next }}
+			{{ if ne . "" }}
+			<link rel="prefetch" href="{{ . }}/">
+			<a href="{{ . }}/" class="next" id="next-link">{{ i18n "nav.next" }}
+				<i class="fa-solid fa-angles-right"></i></a>
+			{{ else }}
+				<a class="next disabled">{{ i18n "nav.next" }}
+					<i class="fa-solid fa-angles-right"></i></a>
+			{{ end }}
+		{{ else }}
+		<a class="next disabled">{{ i18n "nav.next" }}
+			<i class="fa-solid fa-angles-right"></i></a>
+		{{ end }}
+	{{ end }}
+</nav>

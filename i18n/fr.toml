@@ -1,0 +1,15 @@
+[nav]
+back = 'retour'
+toc = 'tdm'
+next = 'suiv'
+previous = 'préc'
+
+[social]
+title = 'Feybound : Une danse des ombres'
+desc = "Un roman de fantasy épique, d'amour et d'ambiguïtés."
+tags = "Donjons et Dragons, roman D&D, roman fantastique, jeu de rôle, histoire d'aventure"
+locale = 'fr_FR'
+url = 'fr/'
+
+[attribs]
+fancontent = '« Feybound : Une danse des ombres » est un contenu de fan <strong>non officiel</strong> autorisé dans le cadre de la <a href="/fr/annex/contenusdefans/">Politique des contenus de fans</a> et la <a href="/fr/annex/ogl/">Open Game License (OGL)</a>. <strong>Ni approuvé</strong>, <strong>ni promu</strong> par Wizards. Certaines parties des matériaux utilisés sont la propriété de Wizards of the Coast. ©Wizards of the Coast LLC.'

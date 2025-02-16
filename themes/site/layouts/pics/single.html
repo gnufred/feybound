@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+    <main class="picture {{ if .Params.wide }}wide{{ end }}">
+    <div class="media picture">
+		<i class="fa-regular fa-image"></i>
+        <a href="{{ .Params.link }}#{{ .Params.id }}">
+            {{ .Title }}
+        </a>
+		<i class="fa-regular fa-image"></i>
+    </div>
+    <a href="{{ .Params.link }}#{{ .Params.id }}" id="prev-link">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    </a>
+    </main>
+</body>
+</html>

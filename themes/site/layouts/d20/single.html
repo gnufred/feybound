@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "lang.html" . }}
+    {{ partial "nav.html" . }}
+    <main>
+        <article>
+            {{ .Content }}
+        </article>
+		{{ partial "attribs.html" . }}
+    </main>
+    {{ partial "scroll.html" . }}
+    {{ partial "nav.html" . }}
+</body>
+</html>
