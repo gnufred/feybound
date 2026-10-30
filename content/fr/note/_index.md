@@ -1,6 +1,6 @@
 ---
 title: "404 Not Found"
-_build:
+build:
   render: never
   list: never
 ---
